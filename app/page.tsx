@@ -30,6 +30,10 @@ export default function PortfolioPage() {
       {/* Subtle background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
+       <div className="absolute inset-0 pointer-events-none">
+       <div className="absolute left-1/2 top-1/5 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-primary/17.5 blur-[180px]" />
+       </div>
+
       {/* ========== PHONE LAYOUT (< md) ========== */}
       <div className="relative z-10 flex md:hidden flex-col h-screen">
         {/* Full-height photo with overlays */}
@@ -179,30 +183,25 @@ export default function PortfolioPage() {
       {/* ========== DESKTOP LAYOUT (lg+) ========== */}
       <div className="relative z-10 hidden lg:flex flex-col h-screen">
         {/* 3-Column Content Grid */}
-        <div className="flex-1 min-h-0 flex items-center justify-center px-12 xl:px-20 py-4">
-          <div className="w-full max-w-7xl grid grid-cols-3 gap-8 xl:gap-14 items-center justify-items-center">
+        <div className="flex-1 min-h-0 flex items-center justify-center px-16 xl:px-40 2xl:px-70 py-4">
+          <div className="w-full max-w-7xl grid grid-cols-[1fr_1fr_1fr] gap-10 xl:gap-32 items-center justify-items-center">
             {/* Column 1 - Photo */}
             <div
               className={`w-full transition-all duration-1000 flex items-center justify-center ${
                 mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
             >
-              <div className="relative w-[350px] h-[467px] xl:w-[420px] xl:h-[560px] overflow-hidden rounded-2xl">
-                <div className="absolute -inset-px rounded-2xl bg-primary/20 z-10 pointer-events-none" />
+              <div className="relative w-full max-w-[420px] aspect-[3/4] overflow-hidden rounded-2xl">
+                <div className="absolute -inset-px rounded-2xl bg-primary/7 z-10 pointer-events-none" />
                 <div className="relative h-full w-full rounded-2xl overflow-hidden border border-border">
                   <Image
-                    src="/images/profile.jpg"
+                    src="/assets/picture.jpg"
                     alt="Alessandro Ladu at a seaside location in Nice, France"
                     fill
                     className="object-cover object-[center_20%]"
                     priority
                     sizes="(max-width: 1280px) 350px, 420px"
-                  />
-                  <div className="absolute top-3 left-3 z-20">
-                    <span className="inline-block px-2.5 py-1 rounded-md bg-primary text-primary-foreground text-xs font-semibold tracking-wider">
-                      Alessandro Ladu
-                    </span>
-                  </div>
+                  />                  
                 </div>
               </div>
             </div>
@@ -218,7 +217,7 @@ export default function PortfolioPage() {
 
             {/* Column 3 - Navigation Buttons */}
             <div
-              className={`flex justify-center transition-all duration-700 delay-600 ${
+              className={`flex justify-self-start transition-all duration-700 delay-600 ${
                 mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
               }`}
             >
@@ -239,7 +238,7 @@ export default function PortfolioPage() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <p className="text-xs text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             {'"Creativity is nothing but the way to solve new problems..."'}
           </p>
           <SocialLinks />

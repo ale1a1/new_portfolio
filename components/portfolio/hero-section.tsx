@@ -16,12 +16,12 @@ export function HeroSection() {
           mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
-        <p className="text-muted-foreground text-xs lg:text-lg font-mono tracking-widest uppercase mb-1">
+        <p className="text-muted-foreground text-xs lg:text-lg font-mono tracking-widest uppercase mb-4">
           Hello, my name is
         </p>
-        <h1 className="text-3xl md:text-3xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-foreground font-mono">
+        <h1 className="text-3xl md:text-3xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight text-foreground font-mono">
           Alessandro
-          <span className="block text-primary mt-1">Ladu</span>
+          <span className="block text-primary mt-3 mb-3">Ladu</span>
         </h1>
       </div>
 
@@ -32,7 +32,7 @@ export function HeroSection() {
       >
         <div className="flex items-center gap-3">
           <div className="h-px w-12 lg:w-16 bg-primary" />
-          <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-muted-foreground font-mono">
+          <p className="ms-2 text-lg md:text-xl lg:text-xl 2xl:text-2xl text-muted-foreground font-mono">
             Front End Developer
           </p>
         </div>

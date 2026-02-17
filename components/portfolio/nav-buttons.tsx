@@ -23,22 +23,22 @@ export function NavButtons({
       <Button
         variant="outline"
         onClick={onInfoClick}
-        className="w-full justify-center gap-2.5 cursor-pointer border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+        className="w-full justify-center gap-2.5 cursor-pointer border border-primary/40 hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <Code className="size-4 xl:size-5 shrink-0" />
         <span>Skills</span>
       </Button>
       <Button
         onClick={onPortfolioClick}
-        className="w-full justify-center gap-2.5 cursor-pointer bg-primary text-primary-foreground hover:bg-transparent hover:text-primary hover:border-primary border border-primary animate-gentle-pulse transition-all duration-300"
+        className="w-full justify-center gap-2.5 cursor-pointer bg-primary text-primary-foreground hover:bg-transparent hover:text-primary hover:border-primary border border-primary animate-gentle-pulse transition-colors duration-100"
       >
         <FolderOpen className="size-4 xl:size-5 shrink-0" />
         <span>Portfolio</span>
-      </Button>
+      </Button>      
       <Button
         variant="outline"
         onClick={onAboutClick}
-        className="w-full justify-center gap-2.5 cursor-pointer border-border text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+        className="w-full justify-center gap-2.5 cursor-pointer border-border text-foreground hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <User className="size-4 xl:size-5 shrink-0" />
         <span>About</span>
@@ -46,7 +46,7 @@ export function NavButtons({
       <Button
         variant="outline"
         onClick={onContactClick}
-        className="w-full justify-center gap-2.5 cursor-pointer border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+        className="w-full justify-center gap-2.5 cursor-pointer border-primary/40 hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <Phone className="size-4 xl:size-5 shrink-0" />
         <span>Contact</span>
@@ -54,7 +54,7 @@ export function NavButtons({
       <Button
         variant="outline"
         onClick={onEmailClick}
-        className="w-full justify-center gap-2.5 cursor-pointer border-border text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+        className="w-full justify-center gap-2.5 cursor-pointer border-border text-foreground hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <Mail className="size-4 xl:size-5 shrink-0" />
         <span>Email Me</span>
