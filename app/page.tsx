@@ -238,7 +238,7 @@ export default function PortfolioPage() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <p className="text-sm text-muted-foreground">
+          <p className="text-md text-muted-foreground">
             {'"Creativity is nothing but the way to solve new problems..."'}
           </p>
           <SocialLinks />

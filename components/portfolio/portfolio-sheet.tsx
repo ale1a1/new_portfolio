@@ -83,10 +83,7 @@ export function PortfolioSheet({ open, onOpenChange }: PortfolioSheetProps) {
           <SheetHeader className="sticky top-0 z-10 bg-card p-4 pb-0">
             <SheetTitle className="text-2xl font-mono text-primary">
               Portfolio
-            </SheetTitle>
-            <SheetDescription className="text-muted-foreground">
-              My projects and work
-            </SheetDescription>
+            </SheetTitle>            
             <Separator className="bg-border mt-4" />
           </SheetHeader>
           <ScrollArea className="flex-1">

@@ -21,10 +21,7 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
         <DialogHeader>
           <DialogTitle className="text-2xl font-mono text-primary">
             About Me
-          </DialogTitle>
-          <DialogDescription className="text-muted-foreground">
-            A bit about who I am
-          </DialogDescription>
+          </DialogTitle>          
         </DialogHeader>
         <Separator className="bg-border" />
         <div className="flex flex-col gap-4 py-2 text-sm leading-relaxed text-foreground">

@@ -41,8 +41,8 @@ const skills = [
     items: ["Firebase", "SQL (MySQL, SSMS)"],
   },
   {
-    category: "Collaboration",
-    items: ["Airtable", "Confluence", "Trello"],
+    category: "Workflow & Collaboration",
+    items: ["AgilePM","Airtable", "Confluence", "Trello", "Teamwork"],
   },
   {
     category: "Cloud",
@@ -51,30 +51,23 @@ const skills = [
   {
     category: "Version Control",
     items: ["Git", "GitHub", "GitLab"],
-  },
-  {
-    category: "Methodologies",
-    items: ["AgilePM"],
-  },
+  }, 
 ]
 
 export function SkillsDialog({ open, onOpenChange }: SkillsDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-2xl max-h-[85vh] overflow-hidden bg-card border-border flex flex-col">
-        <DialogHeader className="sticky top-0 z-10 bg-card pb-3">
+      <DialogContent className="sm:max-w-2xl max-h-[85vh] overflow-hidden bg-card flex flex-col">
+        <DialogHeader className="sticky top-0 bg-card pb-0">
           <DialogTitle className="text-2xl font-mono text-primary">
             Technical Skills
-          </DialogTitle>
-          <DialogDescription className="text-muted-foreground">
-            Technologies and tools I work with
-          </DialogDescription>
-          <Separator className="bg-border mt-3" />
+          </DialogTitle>        
+          <Separator className="bg-border mt-1" />
         </DialogHeader>
         <div className="flex flex-col gap-4 py-2 overflow-y-auto">
           {skills.map((skillGroup) => (
             <div key={skillGroup.category} className="flex flex-col gap-2">
-              <h3 className="text-sm font-semibold text-foreground tracking-wide uppercase">
+              <h3 className="text-sm font-semibold text-primary/60 tracking-wide uppercase">
                 {skillGroup.category}
               </h3>
               <div className="flex flex-wrap gap-2">

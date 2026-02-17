@@ -40,17 +40,14 @@ export function EmailSheet({ open, onOpenChange }: EmailSheetProps) {
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="right" className="w-full sm:max-w-md bg-card border-border overflow-y-auto">
-        <SheetHeader>
+      <SheetContent side="right" className="w-full sm:max-w-md bg-card border border-border overflow-y-auto">      
+        <SheetHeader className="px-4 pt-4 pb-3">
           <SheetTitle className="text-2xl font-mono text-primary">
             Email Me
           </SheetTitle>
-          <SheetDescription className="text-muted-foreground">
-            Send me a message and I will get back to you
-          </SheetDescription>
+          <Separator className="bg-border mt-4" />
         </SheetHeader>
-        <Separator className="bg-border" />
-        <form onSubmit={handleSubmit} className="flex flex-col gap-5 px-4 pb-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6 px-4 pb-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
               <Label htmlFor="firstName" className="text-xs uppercase tracking-wider text-muted-foreground">
@@ -116,7 +113,7 @@ export function EmailSheet({ open, onOpenChange }: EmailSheetProps) {
           </div>
           <Button
             type="submit"
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/80 transition-all duration-300 cursor-pointer"
           >
             <Send className="size-4" />
             Send Message

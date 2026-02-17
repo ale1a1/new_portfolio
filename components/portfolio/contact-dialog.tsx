@@ -47,10 +47,7 @@ export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
         <DialogHeader>
           <DialogTitle className="text-2xl font-mono text-primary">
             Contact
-          </DialogTitle>
-          <DialogDescription className="text-muted-foreground">
-            Get in touch with me
-          </DialogDescription>
+          </DialogTitle>          
         </DialogHeader>
         <Separator className="bg-border" />
         <div className="flex flex-col gap-4 py-2">
