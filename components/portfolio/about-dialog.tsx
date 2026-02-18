@@ -26,13 +26,17 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
         <Separator className="bg-border" />
         <div className="flex flex-col gap-4 py-2 text-sm leading-relaxed text-foreground">
           <p>
-            {"I'm Alessandro, a Front End Developer based in Liverpool, UK. I'm passionate about crafting clean, accessible, and performant user interfaces that delight users."}
+            I'm Alessandro, a Front End Developer based in Liverpool, UK. 
+            <br /> 
+            I'm passionate about crafting clean, accessible, and performant user interfaces that delight users.
           </p>
           <p>
-            {"With experience across multiple frameworks including React, Next.js, Angular, Vue, and Svelte, I bring versatility and a deep understanding of modern web development to every project."}
+            With experience across multiple frameworks including React, Next.js, Angular, Vue, and Svelte, I bring versatility and a deep understanding of modern web development to every project.
           </p>
           <p>
-            {"I believe creativity is nothing but the way to solve new problems. I enjoy turning complex challenges into elegant, intuitive solutions through thoughtful design and robust engineering."}
+            I believe creativity is nothing but the way to solve new problems. 
+            <br /> 
+            I enjoy turning complex challenges into elegant, intuitive solutions through thoughtful design and robust engineering.
           </p>
           <p className="text-muted-foreground italic">
             {"When I'm not coding, you'll find me exploring new technologies, contributing to open source, or enjoying the vibrant city of Liverpool."}
