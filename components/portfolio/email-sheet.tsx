@@ -27,17 +27,6 @@ export function EmailSheet({ open, onOpenChange }: EmailSheetProps) {
     email: "",
     message: "",
   })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const subject = `Portfolio Contact from ${formData.firstName} ${formData.lastName}`
-    const body = `${formData.message}\n\nFrom: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}`
-    window.open(
-      `mailto:ale1a184@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    )
-    onOpenChange(false)
-  }
-
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent side="right" className="w-full sm:max-w-md bg-card border border-border overflow-y-auto">      
@@ -47,7 +36,7 @@ export function EmailSheet({ open, onOpenChange }: EmailSheetProps) {
           </SheetTitle>
           <Separator className="bg-border mt-4" />
         </SheetHeader>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6 px-4 pb-4">
+        <form action="https://formsubmit.co/ale1a1@libero.it" method="POST" className="flex flex-col gap-6 px-4 pb-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
               <Label htmlFor="firstName" className="text-xs uppercase tracking-wider text-muted-foreground">
@@ -113,7 +102,7 @@ export function EmailSheet({ open, onOpenChange }: EmailSheetProps) {
           </div>
           <Button
             type="submit"
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/80 transition-all duration-300 cursor-pointer"
+            className="w-full justify-center gap-2.5 cursor-pointer bg-primary text-primary-foreground hover:bg-transparent hover:text-primary hover:border-primary border border-primary transition-colors duration-100"
           >
             <Send className="size-4" />
             Send Message
