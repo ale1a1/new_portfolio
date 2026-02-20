@@ -19,7 +19,7 @@ export function HeroSection() {
         <p className="text-muted-foreground text-xs lg:text-lg font-mono tracking-widest uppercase mb-4">
           Hello, my name is
         </p>
-        <h1 className="text-3xl md:text-3xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight text-foreground font-mono">
+        <h1 className="text-3xl md:text-3xl lg:text-5xl 2xl:text-7xl font-bold tracking-tight text-foreground font-mono">
           Alessandro
           <span className="block text-primary mt-3 mb-3">Ladu</span>
         </h1>

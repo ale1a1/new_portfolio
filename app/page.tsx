@@ -183,7 +183,7 @@ export default function PortfolioPage() {
       <div className="relative z-10 hidden lg:flex flex-col h-screen">
         {/* 3-Column Content Grid */}
         <div className="flex-1 min-h-0 flex items-center justify-center px-16 xl:px-20 2xl:px-50 py-4">
-          <div className="ms-16 w-full grid grid-cols-[1fr_1fr_1fr] gap-10 xl:gap-32 items-center justify-items-center">
+          <div className="ms-10 w-full grid grid-cols-[1fr_1fr_1fr] gap-10 xl:gap-32 items-center justify-items-center">
             {/* Column 1 - Photo */}
             <div
               className={`w-full transition-all duration-1000 flex items-center justify-center ${
