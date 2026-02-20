@@ -46,7 +46,7 @@ export default function PortfolioPage() {
             priority
           />
           {/* Dark gradient overlay from bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" /> */}
           {/* Top bar: name badge + hamburger */}
           <div
             className={`absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 py-4 transition-all duration-700 ${
