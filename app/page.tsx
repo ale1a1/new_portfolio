@@ -79,25 +79,25 @@ export default function PortfolioPage() {
 
         {/* Bottom bar: social icons only */}
         <nav
-          className={`flex items-center justify-center px-4 py-3 border-t border-border bg-card/80 backdrop-blur-sm transition-all duration-700 delay-500 ${
+          className={`flex items-center justify-center px-4 py-5 border-t border-border bg-card/80 backdrop-blur-sm transition-all duration-700 delay-500 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="flex items-center gap-4">
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
-              <Instagram className="size-5" />
+          <div className="flex items-center gap-5">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
+              <Instagram className="size-6" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
-              <Linkedin className="size-5" />
+            <a href="https://www.linkedin.com/in/alessandro-ladu-69196a239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
+              <Linkedin className="size-6" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
-              <Github className="size-5" />
+            <a href="https://github.com/ale1a1" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
+              <Github className="size-6" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
-              <Youtube className="size-5" />
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
+              <Youtube className="size-6" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitch" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
-              <Twitch className="size-5" />
+            <a href="https://www.twitch.tv" target="_blank" rel="noopener noreferrer" aria-label="Twitch" className="text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer">
+              <Twitch className="size-6" />
             </a>
           </div>
         </nav>
