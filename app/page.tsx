@@ -39,7 +39,7 @@ export default function PortfolioPage() {
         {/* Full-height photo with overlays */}
         <div className="flex-1 min-h-0 relative">
           <Image
-            src="/images/profile.jpg"
+            src="/assets/picture.jpg"
             alt="Alessandro Ladu at a seaside location in Nice, France"
             fill
             className="object-cover object-[center_15%]"
@@ -138,7 +138,7 @@ export default function PortfolioPage() {
                 <div className="absolute -inset-px rounded-2xl bg-primary/20 z-10 pointer-events-none" />
                 <div className="relative h-full w-full rounded-2xl overflow-hidden border border-border">
                   <Image
-                    src="/images/profile.jpg"
+                    src="/assets/picture.jpg"
                     alt="Alessandro Ladu at a seaside location in Nice, France"
                     fill
                     className="object-cover object-[center_20%]"
