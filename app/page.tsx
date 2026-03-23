@@ -103,8 +103,8 @@ export default function PortfolioPage() {
         </nav>
       </div>
 
-      {/* ========== TABLET LAYOUT (md to lg) ========== */}
-      <div className="relative z-10 hidden md:flex lg:hidden flex-col h-screen">
+      {/* ========== TABLET LAYOUT (md to xl) ========== */}
+      <div className="relative z-10 hidden md:flex xl:hidden flex-col h-screen">
         {/* Tablet header with social links + hamburger */}
         <header
           className={`flex items-center justify-between px-8 py-4 transition-all duration-700 ${
@@ -179,11 +179,11 @@ export default function PortfolioPage() {
         </footer>
       </div>
 
-      {/* ========== DESKTOP LAYOUT (lg+) ========== */}
-      <div className="relative z-10 hidden lg:flex flex-col h-screen">
+      {/* ========== DESKTOP LAYOUT (xl+) ========== */}
+      <div className="relative z-10 hidden xl:flex flex-col h-screen">
         {/* 3-Column Content Grid */}
-        <div className="flex-1 min-h-0 flex items-center justify-center px-10 xl:px-20 2xl:px-40 py-4">
-          <div className="w-full max-w-[1320px] mx-auto grid grid-cols-[minmax(320px,1.2fr)_minmax(420px,1.6fr)_minmax(220px,0.8fr)] gap-10 xl:gap-32 items-center justify-items-center">
+        <div className="flex-1 min-h-0 flex items-center justify-center px-6 lg:px-10 xl:px-20 2xl:px-40 py-4">
+          <div className="w-full max-w-[1320px] mx-auto grid grid-cols-1 xl:grid-cols-[minmax(320px,1.2fr)_minmax(420px,1.6fr)_minmax(220px,0.8fr)] gap-8 lg:gap-10 xl:gap-32 items-center justify-items-center">
             {/* Column 1 - Photo */}
             <div
               className={`w-full transition-all duration-1000 flex items-center justify-center ${
