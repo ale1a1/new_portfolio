@@ -43,7 +43,7 @@ const contactInfo = [
 export function ContactDialog({ open, onOpenChange }: ContactDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md bg-card border-border">
+      <DialogContent className="sm:max-w-md bg-card border border-white/40">
         <DialogHeader>
           <DialogTitle className="text-2xl font-mono text-primary">
             Contact

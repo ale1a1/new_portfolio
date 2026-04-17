@@ -92,7 +92,7 @@ export function PortfolioSheet({ open, onOpenChange }: PortfolioSheetProps) {
   return (
     <>
       <Sheet open={open} onOpenChange={onOpenChange}>
-        <SheetContent side="left" className="w-full sm:max-w-sm bg-card border-border p-0 flex flex-col">
+        <SheetContent side="left" className="w-full sm:max-w-sm bg-card border-t border-l border-b border-border border-r border-r-white/40 p-0 flex flex-col">
           <SheetHeader className="sticky top-0 z-10 bg-card p-4 pb-0">
             <SheetTitle className="text-2xl font-mono text-primary">
               Portfolio

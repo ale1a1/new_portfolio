@@ -79,7 +79,7 @@ export function HeroSection() {
           mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
-        <p className="text-sm lg:text-base text-muted-foreground/60 max-w-[320px] leading-relaxed">
+        <p className="text-sm lg:text-base text-muted-foreground/90 max-w-[320px] leading-relaxed">
           Crafting pixel-perfect interfaces &amp; interactive experiences with modern web technologies.
         </p>
       </div>

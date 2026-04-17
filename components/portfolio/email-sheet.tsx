@@ -29,7 +29,7 @@ export function EmailSheet({ open, onOpenChange }: EmailSheetProps) {
   })
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="right" className="w-full sm:max-w-md bg-card border border-border overflow-y-auto">      
+      <SheetContent side="right" className="w-full sm:max-w-md bg-card border-t border-r border-b border-border border-l border-l-white/40 overflow-y-auto">      
         <SheetHeader className="px-4 pt-4 pb-3">
           <SheetTitle className="text-2xl font-mono text-primary">
             Email Me

@@ -23,7 +23,7 @@ export function NavButtons({
       <Button
         variant="outline"
         onClick={onInfoClick}
-        className="w-full justify-center gap-2.5 cursor-pointer border border-primary/40 hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
+        className="w-full justify-center gap-2.5 cursor-pointer border border-white/40 dark:border-white/40 hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <Code className="size-4 xl:size-5 shrink-0" />
         <span>Skills</span>
@@ -38,7 +38,7 @@ export function NavButtons({
       <Button
         variant="outline"
         onClick={onAboutClick}
-        className="w-full justify-center gap-2.5 cursor-pointer border-border text-foreground hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
+        className="w-full justify-center gap-2.5 cursor-pointer border border-white/40 dark:border-white/40 text-foreground hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <User className="size-4 xl:size-5 shrink-0" />
         <span>About</span>
@@ -46,7 +46,7 @@ export function NavButtons({
       <Button
         variant="outline"
         onClick={onContactClick}
-        className="w-full justify-center gap-2.5 cursor-pointer border-primary/40 hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
+        className="w-full justify-center gap-2.5 cursor-pointer border border-white/40 dark:border-white/40 hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <Phone className="size-4 xl:size-5 shrink-0" />
         <span>Contact</span>
@@ -54,7 +54,7 @@ export function NavButtons({
       <Button
         variant="outline"
         onClick={onEmailClick}
-        className="w-full justify-center gap-2.5 cursor-pointer border-border text-foreground hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
+        className="w-full justify-center gap-2.5 cursor-pointer border border-white/40 dark:border-white/40 text-foreground hover:bg-primary hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <Mail className="size-4 xl:size-5 shrink-0" />
         <span>Email Me</span>

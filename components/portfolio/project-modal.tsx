@@ -49,7 +49,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-lg bg-card border-border">
+      <DialogContent className="sm:max-w-lg bg-card border border-white/40">
         <DialogHeader>
           <DialogTitle className="text-2xl font-mono text-primary">
             {project.name}
