@@ -2,15 +2,45 @@
 
 import { useState, useEffect } from "react"
 
+const roles = ["Front End Developer", "UI Engineer", "React Specialist", "Creative Coder"]
+
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
+  const [roleIndex, setRoleIndex] = useState(0)
+  const [isSwapping, setIsSwapping] = useState(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsSwapping(true)
+      setTimeout(() => {
+        setRoleIndex((prev) => (prev + 1) % roles.length)
+        setIsSwapping(false)
+      }, 300)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <div className="flex flex-col items-center text-center gap-4 animate-hero-float">
+    <div className="flex flex-col items-center text-center gap-5 animate-hero-float">
+      {/* Available for work badge */}
+      <div
+        className={`transition-all duration-700 delay-100 ${
+          mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}
+      >
+        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs font-mono text-primary tracking-wide">
+          <span className="relative flex size-2.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex size-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_2px_rgba(52,211,153,0.6)]" />
+          </span>
+          Available for work
+        </span>
+      </div>
+
       <div
         className={`transition-all duration-700 delay-300 ${
           mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -25,6 +55,7 @@ export function HeroSection() {
         </h1>
       </div>
 
+      {/* Rotating role */}
       <div
         className={`transition-all duration-700 delay-500 ${
           mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -32,13 +63,26 @@ export function HeroSection() {
       >
         <div className="flex items-center gap-3">
           <div className="h-px w-12 lg:w-16 bg-primary" />
-          <p className="ms-2 text-lg md:text-xl lg:text-xl 2xl:text-2xl text-muted-foreground font-mono">
-            Front End Developer
+          <p
+            className={`ms-2 text-lg md:text-xl lg:text-xl 2xl:text-2xl text-muted-foreground font-mono transition-all duration-300 ${
+              isSwapping ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
+            }`}
+          >
+            {roles[roleIndex]}
           </p>
         </div>
       </div>
 
-
+      {/* Tagline */}
+      <div
+        className={`transition-all duration-700 delay-700 ${
+          mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}
+      >
+        <p className="text-sm lg:text-base text-muted-foreground/60 max-w-[320px] leading-relaxed">
+          Crafting pixel-perfect interfaces &amp; interactive experiences with modern web technologies.
+        </p>
+      </div>
     </div>
   )
 }

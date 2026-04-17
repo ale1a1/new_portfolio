@@ -107,3 +107,42 @@
   }
 }
 
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-spin {
+  from { --border-angle: 0deg; }
+  to { --border-angle: 360deg; }
+}
+
+.animated-border {
+  position: relative;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--border-angle), transparent 25%, var(--primary) 50%, transparent 75%);
+  animation: border-spin 3s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.animated-border::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--border-angle), transparent 25%, var(--primary) 50%, transparent 75%);
+  animation: border-spin 3s linear infinite;
+  filter: blur(16px);
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+

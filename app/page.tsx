@@ -134,9 +134,8 @@ export default function PortfolioPage() {
                 mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
             >
-              <div className="relative w-[240px] h-[320px] overflow-hidden rounded-2xl">
-                <div className="absolute -inset-px rounded-2xl bg-primary/20 z-10 pointer-events-none" />
-                <div className="relative h-full w-full rounded-2xl overflow-hidden border border-border">
+              <div className="relative w-[240px] h-[320px] rounded-2xl animated-border">
+                <div className="relative h-full w-full rounded-2xl overflow-hidden z-[1] bg-background">
                   <Image
                     src="/assets/picture-mobile.jpg"
                     alt="Alessandro Ladu at a seaside location in Nice, France"
@@ -190,9 +189,8 @@ export default function PortfolioPage() {
                 mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
             >
-              <div className="relative w-full max-w-[420px] aspect-[3/4] overflow-hidden rounded-2xl">
-                <div className="absolute -inset-px rounded-2xl bg-primary/7 z-10 pointer-events-none" />
-                <div className="relative h-full w-full rounded-2xl overflow-hidden border border-border">
+              <div className="relative w-full max-w-[420px] aspect-[3/4] rounded-2xl animated-border">
+                <div className="relative h-full w-full rounded-2xl overflow-hidden z-[1] bg-background">
                   <Image
                     src="/assets/picture.jpg"
                     alt="Alessandro Ladu at a seaside location in Nice, France"
@@ -200,7 +198,7 @@ export default function PortfolioPage() {
                     className="object-cover object-[center_20%]"
                     priority
                     sizes="(max-width: 1280px) 350px, 420px"
-                  />                  
+                  />
                 </div>
               </div>
             </div>
