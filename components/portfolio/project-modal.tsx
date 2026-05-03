@@ -37,6 +37,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
       PostgreSQL: "postgresql/postgresql-original.svg",
       Docker: "docker/docker-original.svg",
       AWS: "amazonwebservices/amazonwebservices-original-wordmark.svg",
+      "Google Cloud": "googlecloud/googlecloud-original.svg",
     }
 
    if (tech === "Squarespace") {

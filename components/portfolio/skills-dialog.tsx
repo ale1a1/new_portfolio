@@ -34,7 +34,7 @@ const skills = [
   },
   {
     category: "Cloud",
-    items: ["AWS", "Netlify", "Serverless Framework"],
+    items: ["AWS", "Google Cloud", "Netlify", "Serverless Framework"],
   },
   {
     category: "Unit Testing",

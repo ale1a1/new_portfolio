@@ -40,7 +40,7 @@ const personalProjects: Project[] = [
     name: "Find Users",
     description:
       "'Find Users' allows users to create profiles, browse a user list, retrieve details, and save favorites. It serves as a boilerplate prototype for user directory and profile management functionality.",
-    technologies: ["Vue 3", "HTML", "Tailwind CSS", "CSS", "TypeScript", "Firebase", "Netlify"],
+    technologies: ["Vue 3", "HTML", "Tailwind CSS", "CSS", "TypeScript", "Google Cloud", "Netlify"],
     url: "https://find-users-application.netlify.app/",
   },
   {
