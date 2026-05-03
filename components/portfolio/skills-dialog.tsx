@@ -18,11 +18,23 @@ interface SkillsDialogProps {
 const skills = [
   {
     category: "Languages",
-    items: ["HTML", "CSS", "Sass", "JavaScript", "TypeScript"],
+    items: ["HTML", "CSS", "Sass", "JavaScript", "TypeScript", "SQL"],
   },
   {
-    category: "Frameworks",
-    items: ["React-Next.js", "Angular", "Svelte-kit", "Vue3-Nuxt", "jQuery", "Bootstrap", "Tailwind CSS"],
+    category: "Frontend",
+    items: ["React", "Next.js", "Material UI", "Angular", "Vue 3", "Nuxt 3", "Bootstrap", "Tailwind CSS"],
+  },
+  {
+    category: "Backend",
+    items: ["Node.js", "NestJS"],
+  },
+  {
+    category: "Database & Tools",
+    items: ["PostgreSQL", "MySQL", "Firebase", "pgAdmin", "Docker"],
+  },
+  {
+    category: "Cloud",
+    items: ["AWS", "Netlify", "Serverless Framework"],
   },
   {
     category: "Unit Testing",
@@ -30,34 +42,30 @@ const skills = [
   },
   {
     category: "Design Tools",
-    items: ["Figma", "Webflow", "MockFlow"],
+    items: ["Figma"],
   },
   {
     category: "CMS",
-    items: ["Squarespace"],
-  },
-  {
-    category: "Database",
-    items: ["Firebase", "SQL (MySQL, SSMS)"],
+    items: ["Squarespace", "WordPress"],
   },
   {
     category: "Workflow & Collaboration",
-    items: ["AgilePM","Airtable", "Confluence", "Trello", "Teamwork"],
+    items: ["AgilePM", "Jira", "Airtable", "Confluence", "Trello", "Teamwork"],
   },
   {
-    category: "Cloud",
-    items: ["Heroku", "Netlify"],
+    category: "AI Tooling",
+    items: ["Claude", "GitHub Copilot", "Vercel v0"],
   },
   {
     category: "Version Control",
     items: ["Git", "GitHub", "GitLab"],
-  }, 
+  },
 ]
 
 export function SkillsDialog({ open, onOpenChange }: SkillsDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-2xl max-h-[85vh] overflow-hidden bg-card flex flex-col">
+      <DialogContent className="w-[95vw] max-w-[95vw] sm:w-[40vw]! sm:max-w-[40vw]! max-h-[95vh] overflow-hidden bg-card flex flex-col">
         <DialogHeader className="sticky top-0 bg-card pb-0">
           <DialogTitle className="text-2xl font-mono text-primary">
             Technical Skills
@@ -67,7 +75,7 @@ export function SkillsDialog({ open, onOpenChange }: SkillsDialogProps) {
         <div className="flex flex-col gap-4 py-2 overflow-y-auto">
           {skills.map((skillGroup) => (
             <div key={skillGroup.category} className="flex flex-col gap-2">
-              <h3 className="text-sm font-semibold text-primary/60 tracking-wide uppercase">
+              <h3 className="text-sm font-semibold text-primary/75 tracking-wide uppercase">
                 {skillGroup.category}
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -75,7 +83,7 @@ export function SkillsDialog({ open, onOpenChange }: SkillsDialogProps) {
                   <Badge
                     key={item}
                     variant="secondary"
-                    className="bg-secondary text-secondary-foreground hover:bg-primary/10 hover:text-primary transition-colors duration-200"
+                    className="bg-black text-white/60 hover:bg-secondary hover:text-secondary-foreground transition-colors duration-200"
                   >
                     {item}
                   </Badge>

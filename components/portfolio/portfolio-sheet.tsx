@@ -18,6 +18,7 @@ export interface Project {
   description: string
   technologies: string[]
   url?: string
+  github?: string
 }
 
 const personalProjects: Project[] = [
@@ -48,6 +49,14 @@ const personalProjects: Project[] = [
       "'Lisbon Chairs Shop' is a conceptual e-commerce website showcasing handcrafted chairs that combine beauty, comfort, and sustainability. It demonstrates a modern and user-friendly online shopping experience.",
     technologies: ["React", "HTML", "CSS", "JavaScript", "Netlify"],
     url: "https://lisbon-chairs-shop.netlify.app/",
+  },
+  {
+    name: "User Management System",
+    description:
+      "A full-stack cloud-native app where the frontend is intentionally simple — the real focus was wiring up a complete AWS stack from scratch. API Gateway routes requests to Lambda functions, RDS (PostgreSQL) persists data, SQS decouples the API from email delivery, and SES sends transactional emails asynchronously. The React frontend is hosted on S3 and served globally via CloudFront.\n\nWhat makes this repo stand out is how portable it is. The entire local-vs-AWS switch is controlled by just two lines of code — one toggle in `src/db.ts` points the API at either local PostgreSQL or AWS RDS, and one in `frontend/src/api.ts` switches the frontend between the local NestJS server and the live Lambda endpoint. You still need to connect your own database and configure your AWS services — but the repo makes that easy. A single `.env.example` lists every variable you need, and the README covers both paths clearly: Option A runs everything locally with no AWS account required, Option B deploys the full stack to AWS via Serverless Framework. Full setup instructions in the repo.\n\nThe repo also ships with 7 error branches, each containing a single realistic production bug spread across different layers — Frontend, Lambda config, API Gateway, Database, IAM, and SQS. Each branch includes a `README-debug.md` with hints but no spoilers, making it a practical sandbox for debugging across a distributed system.",
+    technologies: ["React", "TypeScript", "NestJS", "PostgreSQL", "Docker", "AWS"],
+    url: "https://d1pkd3ungpsqha.cloudfront.net/users",
+    github: "https://github.com/ale1a1/aws-fullstack-playground",
   },
 ]
 
@@ -102,7 +111,7 @@ export function PortfolioSheet({ open, onOpenChange }: PortfolioSheetProps) {
           <div className="flex-1 overflow-y-auto">
             <div className="flex flex-col gap-6 p-4">
               <div className="flex flex-col gap-3">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground/90">
                   Personal Projects
                 </h3>
                 <div className="flex flex-col gap-2">
@@ -126,7 +135,7 @@ export function PortfolioSheet({ open, onOpenChange }: PortfolioSheetProps) {
               <Separator className="bg-border" />
 
               <div className="flex flex-col gap-3">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground/90">
                   Course Projects
                 </h3>
                 <div className="flex flex-col gap-2">
