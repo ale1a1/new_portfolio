@@ -30,15 +30,15 @@ const skills = [
   },
   {
     category: "Database & Tools",
-    items: ["PostgreSQL", "MySQL", "Firebase", "pgAdmin", "Docker"],
+    items: ["PostgreSQL", "MySQL", "Firebase", "pgAdmin", "Docker", "Postman"],
   },
   {
     category: "Cloud",
-    items: ["AWS", "Google Cloud", "Netlify", "Serverless Framework"],
+    items: ["AWS", "Google Cloud", "Netlify", "Vercel", "Serverless Framework"],
   },
   {
-    category: "Unit Testing",
-    items: ["Jest", "Vitest"],
+    category: "Testing",
+    items: ["Jest", "Vitest", "React Testing Library"],
   },
   {
     category: "Design Tools",
@@ -54,7 +54,7 @@ const skills = [
   },
   {
     category: "AI Tooling",
-    items: ["Claude", "GitHub Copilot", "Vercel v0"],
+    items: ["Claude", "GitHub Copilot", "v0"],
   },
   {
     category: "Version Control",
