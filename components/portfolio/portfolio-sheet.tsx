@@ -51,7 +51,7 @@ const personalProjects: Project[] = [
     url: "https://lisbon-chairs-shop.netlify.app/",
   },
   {
-    name: "User Management System",
+    name: "Users Management System",
     description:
       "A full-stack cloud-native app where the frontend is intentionally simple — the real focus was wiring up a complete AWS stack from scratch. API Gateway routes requests to Lambda functions, RDS (PostgreSQL) persists data, SQS decouples the API from email delivery, and SES sends transactional emails asynchronously. The React frontend is hosted on S3 and served globally via CloudFront.\n\nWhat makes this repo stand out is how portable it is. The entire local-vs-AWS switch is controlled by just two lines of code — one toggle in `src/db.ts` points the API at either local PostgreSQL or AWS RDS, and one in `frontend/src/api.ts` switches the frontend between the local NestJS server and the live Lambda endpoint. You still need to connect your own database and configure your AWS services — but the repo makes that easy. A single `.env.example` lists every variable you need, and the README covers both paths clearly: Option A runs everything locally with no AWS account required, Option B deploys the full stack to AWS via Serverless Framework. Full setup instructions in the repo.\n\nThe repo also ships with 7 error branches, each containing a single realistic production bug spread across different layers — Frontend, Lambda config, API Gateway, Database, IAM, and SQS. Each branch includes a `README-debug.md` with hints but no spoilers, making it a practical sandbox for debugging across a distributed system.",
     technologies: ["React", "TypeScript", "NestJS", "PostgreSQL", "Docker", "AWS"],
