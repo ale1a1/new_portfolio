@@ -64,16 +64,18 @@ export default function PortfolioPage() {
               onPortfolioClick={() => setPortfolioOpen(true)}
             />
           </div>
-          {/* Front End Developer text overlaid at bottom-right of photo */}
+          {/* Software Engineer badge overlaid at bottom-right of photo */}
           <div
-            className={`absolute bottom-6 right-4 z-20 text-right transition-all duration-700 delay-300 ${
+            className={`absolute bottom-16 right-4 z-20 transition-all duration-700 delay-300 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            <p className="text-2xl font-bold text-foreground font-mono tracking-tight">
-              Front End
-              <span className="block text-primary">Developer</span>
-            </p>
+            <div className="flex items-center justify-center size-28 rounded-full bg-background/80 backdrop-blur-sm border border-primary/30 shadow-lg">
+              <p className="text-base font-bold text-foreground font-mono tracking-tight text-center leading-tight">
+                Software<br />
+                <span className="text-primary">Engineer</span>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -144,11 +146,11 @@ export default function PortfolioPage() {
                     priority
                     sizes="240px"
                   />
-                  {/* Front End Developer overlaid bottom-right */}
-                  <div className="absolute bottom-3 right-3 z-20 text-right">
-                    <p className="text-sm font-bold text-foreground font-mono tracking-tight drop-shadow-lg">
-                      Front End
-                      <span className="block text-primary">Developer</span>
+                  {/* Software Engineer badge overlaid bottom-right */}
+                  <div className="absolute bottom-3 right-3 z-20 flex items-center justify-center size-20 rounded-full bg-background/80 backdrop-blur-sm border border-primary/30 shadow-lg">
+                    <p className="text-[10px] font-bold text-foreground font-mono tracking-tight text-center leading-tight">
+                      Software<br />
+                      <span className="text-primary">Engineer</span>
                     </p>
                   </div>
                 </div>

@@ -2,7 +2,12 @@
 
 import { useState, useEffect } from "react"
 
-const roles = ["Front End Developer", "UI Engineer", "React Specialist", "Creative Coder"]
+const roles = [
+  "Full Stack Developer",
+  "React · Vue · Angular Expert",
+  "Node.js Developer",
+  "AWS & Cloud Practitioner",
+]
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -55,7 +60,7 @@ export function HeroSection() {
         </h1>
       </div>
 
-      {/* Rotating role */}
+      {/* Role label */}
       <div
         className={`transition-all duration-700 delay-500 ${
           mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -80,7 +85,7 @@ export function HeroSection() {
         }`}
       >
         <p className="text-sm lg:text-base text-muted-foreground/90 max-w-[320px] leading-relaxed">
-          Crafting pixel-perfect interfaces &amp; interactive experiences with modern web technologies.
+          Building end-to-end products — from polished UIs to scalable APIs and cloud infrastructure.
         </p>
       </div>
     </div>
