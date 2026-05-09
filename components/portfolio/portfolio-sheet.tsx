@@ -51,6 +51,14 @@ const personalProjects: Project[] = [
     url: "https://lisbon-chairs-shop.netlify.app/",
   },
   {
+    name: "What Should I Cook?",
+    description:
+      "'What Should I Cook?' is a full-stack recipe discovery web app that helps you find meals based on what's in your fridge, dietary preferences, and cooking time.\n\nUsers can search recipes by diet, cuisine, prep time, health score, and available ingredients, powered by the Spoonacular API. The app features full user authentication via AWS Cognito — including email verification, forgot password, and JWT-based sessions — with a PostgreSQL database on AWS RDS storing user profiles and preferences.\n\nAdditional features include a shopping list with per-recipe ingredient management, a tried recipes log, and per-user dark/light/system theme saved to the database. Recipe detail pages are statically pre-generated at build time using `generateStaticParams` with ISR revalidation.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit", "PostgreSQL", "AWS"],
+    url: "https://main.d1fv3pyedpdjxn.amplifyapp.com/",
+    github: "https://github.com/ale1a/what-should-I-cook-app",
+  },
+  {
     name: "Users Management System",
     description:
       "A full-stack cloud-native app where the frontend is intentionally simple — the real focus was wiring up a complete AWS stack from scratch. API Gateway routes requests to Lambda functions, RDS (PostgreSQL) persists data, SQS decouples the API from email delivery, and SES sends transactional emails asynchronously. The React frontend is hosted on S3 and served globally via CloudFront.\n\nWhat makes this repo stand out is how portable it is. The entire local-vs-AWS switch is controlled by just two lines of code — one toggle in `src/db.ts` points the API at either local PostgreSQL or AWS RDS, and one in `frontend/src/api.ts` switches the frontend between the local NestJS server and the live Lambda endpoint. You still need to connect your own database and configure your AWS services — but the repo makes that easy. A single `.env.example` lists every variable you need, and the README covers both paths clearly: Option A runs everything locally with no AWS account required, Option B deploys the full stack to AWS via Serverless Framework. Full setup instructions in the repo.\n\nThe repo also ships with 7 error branches, each containing a single realistic production bug spread across different layers — Frontend, Lambda config, API Gateway, Database, IAM, and SQS. Each branch includes a `README-debug.md` with hints but no spoilers, making it a practical sandbox for debugging across a distributed system.",
