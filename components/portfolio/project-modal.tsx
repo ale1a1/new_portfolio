@@ -57,8 +57,13 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-2xl max-h-[85vh] overflow-hidden bg-card border border-white/40 flex flex-col">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-mono text-primary">
+          <DialogTitle className="text-2xl font-mono text-primary flex items-center gap-2">
             {project.name}
+            {project.badge && (
+              <span className="text-xs font-sans font-medium tracking-wider px-2 py-0.5 rounded-md border border-muted-foreground/30 text-muted-foreground">
+                {project.badge}
+              </span>
+            )}
           </DialogTitle>
           <DialogDescription className="sr-only">
             Details about the {project.name} project

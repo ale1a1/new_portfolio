@@ -19,6 +19,7 @@ export interface Project {
   technologies: string[]
   url?: string
   github?: string
+  badge?: string
 }
 
 const personalProjects: Project[] = [
@@ -58,6 +59,7 @@ const personalProjects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "AWS"],
     url: "https://main.d1fv3pyedpdjxn.amplifyapp.com/",
     github: "https://github.com/ale1a1/what-should-I-cook-app",
+    badge: "Beta",
   },
   {
     name: "Users Management System",
