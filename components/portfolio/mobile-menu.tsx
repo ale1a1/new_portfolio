@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, Code, User, Phone, Mail, FolderOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { ThemeToggle } from "./theme-toggle"
 
 interface MobileMenuProps {
   onInfoClick: () => void
@@ -43,14 +44,14 @@ export function MobileMenu({
       <SheetContent
         side="right"
         className="
-          !w-screen 
-          !max-w-none 
-          h-screen 
-          bg-card 
-          border-none 
-          flex 
-          flex-col 
-          justify-center 
+          !w-screen
+          !max-w-none
+          h-screen
+          bg-card
+          border-none
+          flex
+          flex-col
+          justify-center
           items-center
         "
       >
@@ -58,9 +59,9 @@ export function MobileMenu({
 
         <div className="flex flex-col gap-6 items-center">
           <Button
-            variant="outline"
+            variant="nav"
             onClick={() => handleClick(onInfoClick)}
-            className="px-6 justify-center gap-3"
+            className="px-6 justify-center gap-3 transition-colors duration-100"
           >
             <Code className="size-4 shrink-0" />
             <span>Skills</span>
@@ -75,31 +76,32 @@ export function MobileMenu({
           </Button>
 
           <Button
-            variant="outline"
+            variant="nav"
             onClick={() => handleClick(onAboutClick)}
-            className="px-6 justify-center gap-3"
+            className="px-6 justify-center gap-3 transition-colors duration-100"
           >
             <User className="size-4 shrink-0" />
             <span>About</span>
           </Button>
 
           <Button
-            variant="outline"
+            variant="nav"
             onClick={() => handleClick(onContactClick)}
-            className="px-6 justify-center gap-3"
+            className="px-6 justify-center gap-3 transition-colors duration-100"
           >
             <Phone className="size-4 shrink-0" />
             <span>Contact</span>
           </Button>
 
           <Button
-            variant="outline"
+            variant="nav"
             onClick={() => handleClick(onEmailClick)}
-            className="px-6 justify-center gap-3"
+            className="px-6 justify-center gap-3 transition-colors duration-100"
           >
             <Mail className="size-4 shrink-0" />
             <span>Email Me</span>
           </Button>
+          <ThemeToggle />
         </div>
       </SheetContent>
     </Sheet>

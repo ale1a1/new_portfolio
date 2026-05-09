@@ -7,7 +7,6 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { ExternalLink, Github } from "lucide-react"
@@ -124,7 +123,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                 {project.url && (
                   <Button
                     asChild
-                    className="w-full justify-center gap-2.5 cursor-pointer bg-primary text-primary-foreground hover:bg-transparent hover:text-primary hover:border-primary border border-primary animate-gentle-pulse transition-colors duration-100"
+                    className="w-full justify-center gap-2.5 cursor-pointer bg-primary text-primary-foreground hover:bg-transparent! hover:text-primary hover:border-primary! border border-primary animate-gentle-pulse transition-colors duration-100"
                   >
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="size-4" />
@@ -135,8 +134,8 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                 {project.github && (
                   <Button
                     asChild
-                    variant="outline"
-                    className="w-full justify-center gap-2.5 cursor-pointer border-border hover:bg-secondary hover:text-primary hover:border-primary transition-colors duration-100"
+                    variant="nav"
+                    className="w-full justify-center gap-2.5 cursor-pointer transition-colors duration-100"
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="size-4" />
