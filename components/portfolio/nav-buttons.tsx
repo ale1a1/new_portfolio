@@ -31,7 +31,7 @@ export function NavButtons({
       </Button>
       <Button
         onClick={onPortfolioClick}
-        className="w-full justify-center gap-2.5 cursor-pointer bg-primary text-primary-foreground border border-primary animate-gentle-pulse transition-colors duration-100"
+        className="w-full justify-center gap-2.5 cursor-pointer bg-primary text-primary-foreground border border-primary animate-gentle-pulse hover:bg-transparent! hover:text-primary hover:border-primary transition-colors duration-100"
       >
         <FolderOpen className="size-4 xl:size-5 shrink-0" />
         <span>Portfolio</span>

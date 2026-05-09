@@ -69,7 +69,7 @@ export function MobileMenu({
 
           <Button
             onClick={() => handleClick(onPortfolioClick)}
-            className="px-6 justify-center gap-3 animate-gentle-pulse"
+            className="px-6 justify-center gap-3 animate-gentle-pulse hover:bg-transparent! hover:text-primary hover:border-primary transition-colors duration-100"
           >
             <FolderOpen className="size-4 shrink-0" />
             <span>Portfolio</span>
