@@ -70,11 +70,13 @@ export default function PortfolioPage() {
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            <div className="flex items-center justify-center size-28 rounded-full bg-background/80 backdrop-blur-sm border border-primary/30 shadow-lg">
-              <p className="text-base font-bold text-foreground font-mono tracking-tight text-center leading-tight">
-                Software<br />
-                <span className="text-primary">Engineer</span>
-              </p>
+            <div className="relative size-28 rounded-full animated-border">
+              <div className="relative flex items-center justify-center size-full rounded-full bg-background/80 backdrop-blur-sm z-1">
+                <p className="text-base font-bold text-foreground font-mono tracking-tight text-center leading-tight">
+                  Software<br />
+                  <span className="text-primary">Engineer</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
