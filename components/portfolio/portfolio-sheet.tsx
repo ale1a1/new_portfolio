@@ -39,9 +39,10 @@ const personalProjects: Project[] = [
   {
     name: "Find Users",
     description:
-      "'Find Users' allows users to create profiles, browse a user list, retrieve details, and save favorites. It serves as a boilerplate prototype for user directory and profile management functionality.",
-    technologies: ["Vue 3", "HTML", "Tailwind CSS", "CSS", "TypeScript", "Google Cloud", "Netlify"],
+      "'Find Users' is a full-stack social directory web app where authenticated users can browse a searchable directory of professionals, save favourites, and manage their own profile.\n\nFirebase Auth handles the full authentication lifecycle — email verification, password reset, and persistent sessions — with careful handling of auth race conditions across async component lifecycles. User profiles and favourites are persisted in Firestore. The directory is built around a fully responsive data table with client-side filtering by profession, country, and open-to-work status, multi-column sorting, pagination, and a mobile-first list view with tap-to-open modals.\n\nThe UI follows a glassmorphism design system applied consistently across all pages, built with Tailwind CSS 4.",
+    technologies: ["Nuxt 3", "Vue 3", "TypeScript", "Tailwind CSS", "Google Cloud", "Netlify"],
     url: "https://find-users-application.netlify.app/",
+    github: "https://github.com/ale1a1/Find-Users-Nuxt",
   },
   {
     name: "Lisbon Chairs Shop",
@@ -54,7 +55,7 @@ const personalProjects: Project[] = [
     name: "What Should I Cook?",
     description:
       "'What Should I Cook?' is a full-stack recipe discovery web app that helps you find meals based on what's in your fridge, dietary preferences, and cooking time.\n\nUsers can search recipes by diet, cuisine, prep time, health score, and available ingredients, powered by the Spoonacular API. The app features full user authentication via AWS Cognito — including email verification, forgot password, and JWT-based sessions — with a PostgreSQL database on AWS RDS storing user profiles and preferences.\n\nAdditional features include a shopping list with per-recipe ingredient management, a tried recipes log, and per-user dark/light/system theme saved to the database. Recipe detail pages are statically pre-generated at build time using `generateStaticParams` with ISR revalidation.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit", "PostgreSQL", "AWS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "AWS"],
     url: "https://main.d1fv3pyedpdjxn.amplifyapp.com/",
     github: "https://github.com/ale1a1/what-should-I-cook-app",
   },

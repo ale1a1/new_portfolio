@@ -95,20 +95,24 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
               {project.technologies.map((tech) => {
                 const isWordmarkOnly = tech === "Squarespace" || tech === "AWS"
 
+                const icon = getIcon(tech)
+
                 return (
                   <li
                     key={tech}
                     className={`flex items-center ${isWordmarkOnly ? "" : "gap-2"}`}
                   >
-                    <img
-                      src={getIcon(tech)}
-                      alt={tech}
-                      className={
-                        isWordmarkOnly
-                          ? "h-6 w-auto object-contain"
-                          : "h-3.5 w-auto object-contain"
-                      }
-                    />
+                    {icon && (
+                      <img
+                        src={icon}
+                        alt={tech}
+                        className={
+                          isWordmarkOnly
+                            ? "h-6 w-auto object-contain"
+                            : "h-3.5 w-auto object-contain"
+                        }
+                      />
+                    )}
 
                     {!isWordmarkOnly && tech}
                   </li>
