@@ -58,7 +58,7 @@ const personalProjects: Project[] = [
       "'What Should I Cook?' is a full-stack recipe discovery web app that helps you find meals based on what's in your fridge, dietary preferences, and cooking time.\n\nUsers can search recipes by diet, cuisine, prep time, health score, and available ingredients, powered by the Spoonacular API. The app features full user authentication via AWS Cognito — including email verification, forgot password, and JWT-based sessions — with a PostgreSQL database on AWS RDS storing user profiles and preferences.\n\nAdditional features include a shopping list with per-recipe ingredient management, a tried recipes log, and per-user dark/light/system theme saved to the database. Recipe detail pages are statically pre-generated at build time using `generateStaticParams` with ISR revalidation.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "AWS"],
     url: "https://main.d1fv3pyedpdjxn.amplifyapp.com/",
-    github: "https://github.com/ale1a1/what-should-I-cook-app",
+    github: "https://github.com/ale1a1/what-should-i-cook",
     badge: "Beta",
   },
   {
